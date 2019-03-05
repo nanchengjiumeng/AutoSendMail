@@ -8,28 +8,28 @@ const schedule = require("node-schedule"); //定时器任务库
 //配置项
 
 //纪念日
-let startDay = "2016/6/24";
+let startDay = "2015/6/19"; 
 //当地拼音,需要在下面的墨迹天气url确认
-const local = "zhejiang/hangzhou";
+const local = "beijing/chaoyang-district";
 
 //发送者邮箱厂家
 let EmianService = "126";
 //发送者邮箱账户SMTP授权码
 let EamilAuth = {
-  user: "xxx@126.com",
-  pass: "xxxx"
+  user: "wang775016074@126.com",
+  pass: "7758521wang"
 };
 //发送者昵称与邮箱地址
-let EmailFrom = '"vince" <xxxxx@126.com>';
+let EmailFrom = '"川流不息" <wang775016074@126.com>';
 
 //接收者邮箱地
-let EmailTo = "xxxxx@qq.com";
+let EmailTo = "1457331962@qq.com";
 //邮件主题
-let EmailSubject = "一封暖暖的小邮件";
+let EmailSubject = "一封给荣荣的小邮件";
 
 //每日发送时间
-let EmailHour = 5;
-let EmialMinminute= 20;
+let EmailHour = 20;
+let EmialMinminute= 19;
 
 // 爬取数据的url
 const OneUrl = "http://wufazhuce.com/";
@@ -45,7 +45,7 @@ function getOneData(){
             }
             let $ = cheerio.load(res.text);
             let selectItem = $("#carousel-one .carousel-inner .item");
-            let todayOne = selectItem[0];
+            let todayOne = selectItem[2];
             let todayOneData = {
               imgUrl: $(todayOne)
                 .find(".fp-one-imagen")

@@ -13,7 +13,7 @@
     ],
     "deploy": {
         "NodeMail": {
-            "user": "user账号",  //登录服务器的user账号
+            "user": "1443837536@qq.com",  //登录服务器的user账号
             "host": ["公网ip地址"],  //登录服务器的公网ip地址
             "ref": "origin/master",  //远端名称及分支名
             "repo": "git仓库地址", //git仓库地址也就是这个项目的仓库地址
